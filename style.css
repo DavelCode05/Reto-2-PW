@@ -1,0 +1,147 @@
+/* ===== Estilos generales ===== */
+body {
+  background-color: #393C3E;   /* color de fondo de la página */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Caja principal que centra todo el sitio */
+#contenedor {
+  background-color: #FFFFFF;
+  width: 780px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* ===== Cabecera ===== */
+#cabecera img {
+  display: block;
+  width: 100%;      /* la imagen se adapta al ancho */
+  height: auto;
+}
+
+/* ===== Cuerpo (contenido a la izquierda, menú a la derecha) ===== */
+#cuerpo {
+  display: flex;      /* pone contenido y menú lado a lado con igual altura */
+}
+
+#contenido {
+  background-color: #D5E6F5;   /* fondo de la sección de contenido */
+  width: 70%;
+  box-sizing: border-box;
+  padding: 30px 40px;
+  min-height: 350px;
+}
+
+#menu {
+  background-color: #1C6087;   /* fondo del menú de navegación */
+  width: 30%;
+  box-sizing: border-box;
+  padding: 30px 12px;
+  min-height: 350px;
+}
+
+h1 {
+  font-size: 15px;
+  margin-top: 0;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.8;
+}
+
+/* ===== Menú ===== */
+#menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu li {
+  margin-bottom: 15px;
+}
+
+#menu a {
+  color: #FFFFFF;
+}
+
+/* ===== Pie de página ===== */
+#pie {
+  background-color: #FFFFFF;
+  text-align: center;
+  padding: 10px;
+}
+
+#pie p {
+  text-align: center;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+/* ===== Secciones que se muestran / ocultan con JavaScript ===== */
+.oculto {
+  display: none;
+}
+
+/* ===== Formulario ===== */
+fieldset {
+  border: 1px solid #888888;
+  padding: 10px 20px 20px 20px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  width: 150px;
+  margin-top: 5px;
+}
+
+#botones {
+  margin-top: 15px;
+}
+
+/* Mensajes de error (rojo) y de éxito (verde) */
+.error {
+  display: block;
+  color: #B00000;
+  font-size: 12px;
+}
+
+#mensajeFinal {
+  color: #006400;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* ===== Responsive: pantallas pequeñas (celulares) ===== */
+@media screen and (max-width: 600px) {
+  #cuerpo {
+    display: block;  /* uno debajo del otro */
+  }
+
+  #contenido,
+  #menu {
+    width: 100%;
+    min-height: 0;
+  }
+
+  #contenido {
+    padding: 20px;
+  }
+
+  #menu {
+    padding: 20px;
+  }
+}
